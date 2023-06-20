@@ -1,0 +1,115 @@
+/* Small screens - MOBILE */
+@media only screen {
+  :root {
+    --min-res: calc(min(97vh, 97vw));
+  }
+
+  * {
+    color: white;
+  }
+
+  *:not(img) {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #chessboard {
+    background-color: black;
+    width: var(--min-res);
+    height: var(--min-res);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #topMargin, #bottomMargin {
+    width: 92%;
+    height: 4%;
+    display: flex;
+    align-items: center;
+  }
+
+  .letter {
+    width: 12.5%;
+    text-align: center;
+  }
+
+  #middleSection {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+  }
+
+  #leftMargin, #rightMargin {
+    width: 4%;
+    height: 100%;
+    padding-top: 7%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .digit {
+    height: 12.5%;
+    text-align: center;
+  }
+
+  #actualBoard {
+    position: relative;
+    width: 92%;
+    height: 100%;
+  }
+
+  #horseIcon {
+    position: absolute;
+    content: url("./portablejim-Chess-tile-Knight-2.svg");
+    width: 10%;
+    height: 10%;
+  }
+
+  #targetIcon {
+    position: absolute;
+    content: url("./target-39.svg");
+    width: 10%;
+    height: 10%;
+    display: none;
+  }
+
+  .row {
+    width: 100%;
+    height: 12.5%;
+    display: flex;
+  }
+
+
+  .square {
+    width: 12.5%;
+    height: 100%;
+  }
+
+  .row:nth-child(2n) .square:nth-child(2n),
+  .row:nth-child(2n - 1) .square:nth-child(2n - 1) {
+    background-color: rgb(209, 139, 71);
+  }
+
+  .row:nth-child(2n) .square:nth-child(2n - 1),
+  .row:nth-child(2n - 1) .square:nth-child(2n) {
+    background-color: rgb(255, 206, 158);
+  }
+
+}
+
+/* Medium - Large screens */
+@media only screen and (min-width: 40.063em) {
+} /* min-width 641px, medium screens */
